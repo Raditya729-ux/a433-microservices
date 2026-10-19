@@ -18,5 +18,5 @@ spec:
           image: radityabp/karsajobs-ui:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8000
 

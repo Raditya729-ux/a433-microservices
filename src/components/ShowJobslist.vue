@@ -58,7 +58,7 @@ this.jobs = Array.isArray(data.body) ? data.body : [];
   computed: {
     filteredJobs(){
       return this.jobs.filter((job) => {
-        return job.Role.toLowerCase().match(this.search.toLowerCase());
+        return (job.Role || "").toLowerCase().includes(this.search.toLowerCase());
       });
     }
     

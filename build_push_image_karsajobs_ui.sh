@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Build Docker image untuk frontend Karsa Jobs
 docker build -t radityabp/karsajobs-ui:latest .
