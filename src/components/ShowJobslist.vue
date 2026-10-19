@@ -50,7 +50,7 @@ export default {
   },
   created() {
     this.$http.get(process.env.VUE_APP_BACKEND + '/jobs').then(function(data){
-      this.jobs = data.body;
+this.jobs = Array.isArray(data.body) ? data.body : [];
     }, error => {
       this.status = error;
     });

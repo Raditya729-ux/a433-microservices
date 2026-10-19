@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: karsajobs-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: karsajobs-ui
+  template:
+    metadata:
+      labels:
+        app: karsajobs-ui
+    spec:
+      containers:
+        - name: karsajobs-ui
+          image: radityabp/karsajobs-ui:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+
